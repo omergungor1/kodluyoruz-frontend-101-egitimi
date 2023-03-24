@@ -2,17 +2,17 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
 // pathname
-console.log(document.location.pathname)
+console.log("pathname: " + document.location.pathname);
 
 // head icindeki bilgiler
-console.log(document.head)
+console.log("head: " + document.head)
 
 // body icindeki bilgiler
-console.log(document.body)
+console.log("Body: " + document.body)
 
 // url bilgisi
-console.log(document.URL)
-console.log(document.baseURI)
+console.log("Url: " + document.URL)
+console.log("baseUri: " + document.baseURI)
 
 
 // document icerisinde style bilgilerini degistirmek:

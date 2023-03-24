@@ -7,4 +7,7 @@
 // alert("Merhaba Dunya")
 
 // console.log ile Merhaba Dunya:
-console.log("Merhaba Dunya")
+console.log("Merhaba Dunya");
+var a = 10 / 'a';
+console.log(Boolean(a));
+console.log(new Date().getHours());

@@ -1,4 +1,5 @@
 // ********** liste icerisindeki son elemana ulasmak veya eleman eklemek **********
+console.log(!!2);
 
 let lastChild = document.querySelector("ul#list>li:last-child")
 lastChild.innerHTML = "son oge degisti..."
@@ -14,3 +15,11 @@ liDOM.innerHTML = "Kendi Olusturdugumuz Oge"
 // ulDOM.append(liDOM) // en sona ekler
 ulDOM.prepend(liDOM)
 
+
+var money;
+var canBuy =
+    (money < 17) ? "Satın alamazsın.." :
+        (money > 30) ? "Satın alabilirsin.." :
+            "Para miktarını girmen gerekmektedir..";
+
+console.log('CanBuy=: ' + canBuy) 
