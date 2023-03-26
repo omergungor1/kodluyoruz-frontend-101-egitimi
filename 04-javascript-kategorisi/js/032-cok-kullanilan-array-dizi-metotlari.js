@@ -2,11 +2,15 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 // https://www.w3schools.com/js/js_array_methods.asp
 
-let items = [1, 2, 3, 4, 5] 
+let items = [1, 2, 3, 4, 5]
 
 // Array icinde Array:
 let femaleUsers = ["Ayse", "Hulya", "Merve"]
 let maleUsers = ["Ahmet", "Hasan", "Mehmet"]
+
+let newArray = [...items, ...maleUsers, ...femaleUsers];
+console.log('newArray: ', newArray);
+console.log('newArray Length: ', newArray.length);
 
 items.unshift(femaleUsers)
 
@@ -27,7 +31,7 @@ console.log("items: ", items)
 items.unshift("lorem")
 items.push("ipsum")
 
-console.log( items.indexOf("ipsum") )
+console.log(items.indexOf("ipsum"))
 
 // Array Kopyalamak -> slice, [...ES6]
 let copyItems = items
@@ -56,6 +60,41 @@ console.log(allUsers.join(" --- "))
 
 
 // Istedigimiz Index Bilgisine Oge Eklemek -> splice(index, 0, value)
-allUsers.splice(allUsers.length -1, 0, "Melissa")
-allUsers.splice(Math.floor( allUsers.length / 2 ), 0, "Lorem")
+allUsers.splice(allUsers.length - 1, 0, "Melissa")
+allUsers.splice(Math.floor(allUsers.length / 2), 0, "Lorem")
 console.log(allUsers)
+
+const person = [{
+    name: "Adem",
+    age: 25,
+    languages: ["JavaScript", "CSS"],
+},
+{
+    name: "Oğuz",
+    age: 33,
+    languages: ["Java", "HTML"],
+},
+{
+    name: "Halil",
+    age: 43,
+    languages: ["Java", "VueJS"],
+},
+{
+    name: "KamiL",
+    age: 43,
+    languages: ["Java", "VueJS"],
+},
+{
+    name: "jamiLİO",
+    age: 43,
+    languages: ["Java", "VueJS"],
+}
+];
+
+
+
+const newPerson = person.map((item, index) => ({
+    userName: item.name, shortName: item.name.slice(0, 3), age: item.age, newName: item.name[0].toUpperCase() + item.name.slice(1).toLowerCase()
+}));
+
+console.log(newPerson);
